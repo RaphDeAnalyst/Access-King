@@ -1,0 +1,1797 @@
+:root {
+    --primary-blue: #1e3a8a;
+    --accent-blue: #2563eb;
+    --solar-yellow: #fbbf24;
+    --text-dark: #111827;
+    --text-medium: #6b7280;
+    --bg-white: #ffffff;
+    --bg-light-gray: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-medium);
+    padding-top: 4.75rem; /* Use rem instead of fixed px */
+    background-color: var(--bg-white);
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Primary Blue Theme */
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+/* Buttons - Blue Primary */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--bg-white);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+/* Remove green buttons, replace with blue */
+.btn-success {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--bg-white);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+/* Solar Yellow Accents (minimal use) */
+.text-solar-accent {
+    color: var(--solar-yellow) !important;
+}
+
+/* Updated text hierarchy */
+h1, h2, h3 {
+    color: var(--text-dark);
+}
+
+h1 {
+    color: var(--primary-blue);
+}
+
+.lead {
+    color: var(--text-medium);
+}
+
+/* Hero section with full-width background image and refined overlay */
+.hero-section {
+    background: linear-gradient(rgba(30, 58, 138, 0.6) 0%, rgba(30, 58, 138, 0.3) 100%),
+                url('Home hero section image.webp') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+/* Page banner heroes for inner pages */
+.page-hero-banner {
+    background-color: var(--primary-blue);
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.page-hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero-banner h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-hero-banner .lead {
+    color: #e5e7eb;
+}
+
+/* Page banner with background image */
+.page-hero-banner-image {
+    background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)),
+                url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.page-hero-banner-image .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero-banner-image h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-hero-banner-image .lead {
+    color: #e5e7eb;
+}
+
+/* Quote page hero banner - smaller 35vh height */
+.quote-hero-banner {
+    background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(30, 58, 138, 0.6)),
+                url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.quote-hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.quote-hero-banner h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.quote-hero-banner .lead {
+    color: #e5e7eb;
+}
+
+/* Quote form styling */
+.form-control-lg {
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control-lg:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.form-select-lg {
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-select-lg:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+}
+
+/* Textarea styling to match other form controls */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Form check styling */
+.form-check-input:checked {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Light gray section backgrounds */
+.stats-section {
+    background-color: var(--bg-light-gray);
+    border-top: 3px solid var(--primary-blue);
+}
+
+.stat-item {
+    padding: 2rem 1rem;
+}
+
+.stat-item h3 {
+    color: var(--solar-yellow);
+    font-weight: 700;
+}
+
+.testimonial-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Flat CTA section */
+/* CTA section - matching load calculator background for consistency */
+.cta-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    padding: 2.5rem 0 !important; /* Override py-5 to make it thinner */
+    color: var(--text-dark) !important;
+}
+
+.cta-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-dark) !important;
+}
+
+.cta-section .lead {
+    font-size: 1.1rem;
+    color: var(--text-medium) !important;
+}
+
+/* Override text-white class in CTA section since we're using powder blue */
+.cta-section.text-white,
+.cta-section .text-white {
+    color: var(--text-dark) !important;
+}
+
+/* Ensure buttons look good on powder blue background */
+.cta-section .btn-success {
+    background-color: #25d366;
+    border-color: #25d366;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.cta-section .btn-success:hover {
+    background-color: #20b358;
+    border-color: #20b358;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+}
+
+.whatsapp-float a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Flat card design */
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-white);
+}
+
+.card:hover {
+    border-color: var(--accent-blue);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    background-color: #111827 !important;
+    color: #e5e7eb !important;
+}
+
+footer h5, footer h6 {
+    color: #ffffff !important;
+}
+
+footer a {
+    color: #d1d5db !important;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--solar-yellow) !important;
+}
+
+footer .text-muted {
+    color: #9ca3af !important;
+}
+
+footer p {
+    color: #d1d5db !important;
+}
+
+/* Ensure Bootstrap text-light class works in footer */
+footer .text-light {
+    color: #f8f9fa !important;
+}
+
+/* Override any Bootstrap text color conflicts in footer */
+footer .text-white {
+    color: #ffffff !important;
+}
+
+/* Ensure all list items in footer are visible */
+footer ul li {
+    color: #d1d5db !important;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer icons should be visible */
+footer i {
+    color: inherit !important;
+}
+
+/* ================================
+   RESPONSIVE DESIGN SYSTEM
+   ================================ */
+
+/* Base responsive containers */
+.container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Prevent content from stretching too wide on large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Typography Responsiveness */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-bottom: 0.75em;
+}
+
+/* Responsive font sizes */
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h5 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+h6 { font-size: clamp(1rem, 2vw, 1.25rem); }
+
+.lead {
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+}
+
+/* ================================
+   NAVIGATION RESPONSIVENESS
+   ================================ */
+
+.navbar {
+    padding: 0.75rem 0;
+    background: var(--primary-blue) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* ================================
+   ENHANCED MOBILE NAVIGATION
+   ================================ */
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border-radius: 0.375rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile menu slide animation */
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--primary-blue);
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-nav {
+        gap: 0.25rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 0.375rem;
+        transition: all 0.2s ease;
+        color: rgba(255,255,255,0.9) !important;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        background: rgba(255,255,255,0.1);
+        color: white !important;
+    }
+
+    .navbar-nav .nav-link.active {
+        background: rgba(255,255,255,0.15);
+        color: white !important;
+        font-weight: 600;
+    }
+
+    /* Mobile Get Quote button */
+    .navbar-nav .btn {
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ================================
+   HERO SECTIONS RESPONSIVENESS
+   ================================ */
+
+/* Hero section with custom background image */
+.hero-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(30, 58, 138, 0.6) 0%, rgba(30, 58, 138, 0.3) 100%),
+                url('Home hero section image.webp') center/cover no-repeat;
+    padding: 3rem 0;
+    position: relative;
+}
+
+/* Page hero banner with solid background */
+.page-hero-banner {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    background: var(--primary-blue);
+    padding: 2.5rem 0;
+    position: relative;
+}
+
+/* Page hero banner with background image restored */
+.page-hero-banner-image {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)),
+                url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    padding: 2.5rem 0;
+    position: relative;
+}
+
+
+/* Quote page hero banner with background image */
+.quote-hero-banner {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(30, 58, 138, 0.6)),
+                url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    padding: 2.5rem 0;
+    position: relative;
+    color: white;
+}
+
+.hero-section .container,
+.page-hero-banner .container,
+.page-hero-banner-image .container,
+.quote-hero-banner .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* ================================
+   BUTTONS & FORMS RESPONSIVENESS
+   ================================ */
+
+.btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    min-height: 2.75rem; /* Touch-friendly minimum */
+    line-height: 1.4;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    min-height: 3.5rem; /* Larger touch target */
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    border: 2px solid #e5e7eb;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    min-height: 2.75rem; /* Touch-friendly */
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Enhanced form responsiveness */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Touch-friendly form improvements */
+@media (max-width: 767px) {
+    .form-control {
+        font-size: 1rem; /* Prevent zoom on iOS */
+        padding: 1rem;
+        min-height: 3rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    textarea.form-control {
+        min-height: 140px;
+    }
+
+    /* Ensure form buttons are full width on mobile */
+    .btn-primary,
+    .btn-success,
+    .btn-outline-primary {
+        width: 100%;
+        margin-bottom: 1rem;
+        min-height: 3rem;
+        font-size: 1rem;
+    }
+
+    /* Form rows stack on mobile */
+    .row > .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ================================
+   CARD RESPONSIVENESS
+   ================================ */
+
+.card {
+    border-radius: 0.875rem;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--accent-blue);
+}
+
+.card-img-top {
+    height: 12rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+   ================================ */
+
+/* Small phones (320px - 479px) */
+@media (max-width: 479px) {
+    body {
+        padding-top: 4rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .hero-section,
+    .page-hero-banner,
+    .page-hero-banner-image,
+    .quote-hero-banner {
+        min-height: 50vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-img-top {
+        height: 10rem;
+    }
+
+    .whatsapp-float {
+        width: 3rem;
+        height: 3rem;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.125rem;
+    }
+
+    .whatsapp-float a {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+}
+
+/* Regular phones (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    body {
+        padding-top: 4.5rem;
+    }
+
+    .hero-section,
+    .page-hero-banner,
+    .page-hero-banner-image,
+    .quote-hero-banner {
+        min-height: 55vh;
+        padding: 2.5rem 0;
+    }
+
+    .btn-lg {
+        min-width: 200px;
+    }
+
+    .card-img-top {
+        height: 11rem;
+    }
+
+    .whatsapp-float {
+        width: 3.5rem;
+        height: 3.5rem;
+        bottom: 1.25rem;
+        right: 1.25rem;
+        font-size: 1.25rem;
+    }
+
+    .whatsapp-float a {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-section,
+    .page-hero-banner,
+    .page-hero-banner-image,
+    .quote-hero-banner {
+        min-height: 50vh;
+        padding: 3rem 0;
+    }
+
+    .btn-lg {
+        padding: 0.875rem 1.75rem;
+    }
+
+    .card-img-top {
+        height: 12rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Small laptops (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+
+    .page-hero-banner,
+    .page-hero-banner-image,
+    .quote-hero-banner {
+        min-height: 45vh;
+    }
+
+    .card-img-top {
+        height: 13rem;
+    }
+}
+
+/* Large desktops (1200px+) */
+@media (min-width: 1200px) {
+    .hero-section {
+        min-height: 65vh;
+    }
+
+    .page-hero-banner,
+    .page-hero-banner-image,
+    .quote-hero-banner {
+        min-height: 40vh;
+    }
+
+    .card-img-top {
+        height: 14rem;
+    }
+
+    .whatsapp-float {
+        width: 4rem;
+        height: 4rem;
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .whatsapp-float a {
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+}
+
+/* Product page specific styles */
+#products .row {
+    margin-bottom: 3rem;
+}
+
+#products h3 {
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-blue);
+    color: var(--text-dark);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body ul {
+    min-height: 120px;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+/* Ensure consistent card heights */
+.card.h-100 {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.h-100 .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card.h-100 .card-body .btn {
+    margin-top: auto;
+}
+
+/* Package cards styling */
+.card.border-success,
+.card.border-primary,
+.card.border-warning {
+    border-width: 3px !important;
+}
+
+.card-header {
+    padding: 1rem;
+}
+
+/* Section backgrounds for visual separation */
+section {
+    padding: 4rem 0;
+}
+
+section.bg-light {
+    background-color: var(--bg-light-gray) !important;
+}
+
+/* Alternating section backgrounds */
+section:nth-child(even) {
+    background-color: var(--bg-light-gray);
+}
+
+.mb-5 {
+    margin-bottom: 4rem !important;
+}
+
+/* Mobile responsive styles */
+/* ================================
+   SECTION SPACING RESPONSIVENESS
+   ================================ */
+
+section {
+    padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.mb-5 {
+    margin-bottom: clamp(2rem, 4vw, 4rem) !important;
+}
+
+/* ================================
+   STATISTICS SECTION RESPONSIVENESS
+   ================================ */
+
+.stats-section .stat-item {
+    padding: clamp(1rem, 3vw, 2rem) 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stats-section .stat-item h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    .stats-section .col-md-4 {
+        margin-bottom: 2rem;
+    }
+
+    .stats-section .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* ================================
+   TESTIMONIALS RESPONSIVENESS
+   ================================ */
+
+.testimonial-card {
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.testimonial-card .lead {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card h5 {
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+}
+
+/* Carousel controls responsiveness */
+.carousel-control-prev,
+.carousel-control-next {
+    width: clamp(3rem, 5vw, 4rem);
+}
+
+@media (max-width: 767px) {
+    .carousel-control-prev {
+        left: -2rem;
+    }
+
+    .carousel-control-next {
+        right: -2rem;
+    }
+}
+
+/* ================================
+   PRODUCT PAGE RESPONSIVENESS
+   ================================ */
+
+#products .row {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+#products h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+/* Package cards responsive spacing */
+.card.border-success,
+.card.border-primary,
+.card.border-warning {
+    border-width: 2px !important;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+    .card.border-success,
+    .card.border-primary,
+    .card.border-warning {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ================================
+   CONTACT PAGE RESPONSIVENESS
+   ================================ */
+
+/* Contact information cards */
+.contact-info-card {
+    padding: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1.5rem;
+    height: 100%;
+}
+
+/* FAQ accordion responsive */
+.accordion-button {
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
+    font-size: clamp(0.95rem, 2vw, 1rem);
+}
+
+.accordion-body {
+    padding: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: clamp(0.9rem, 2vw, 0.95rem);
+}
+
+/* ================================
+   OUR STORY SECTION STYLING
+   ================================ */
+
+/* Section divider */
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--solar-yellow));
+    border-radius: 2px;
+}
+
+/* Timeline styling */
+.story-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-blue), var(--solar-yellow));
+    border-radius: 1px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--bg-white);
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+}
+
+.timeline-content h5 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: var(--text-medium);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Statistics highlights */
+.stat-highlight {
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-highlight:hover {
+    transform: translateY(-5px);
+}
+
+.stat-highlight h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.stat-highlight p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* CEO Section Styling */
+.ceo-section {
+    position: relative;
+}
+
+.ceo-portrait-container {
+    position: relative;
+    display: inline-block;
+}
+
+.ceo-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-white);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.portrait-border {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue), var(--solar-yellow));
+    z-index: 1;
+}
+
+.ceo-portrait:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* CEO Quote Card */
+.ceo-quote-card {
+    background: var(--bg-white);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    position: relative;
+    margin-top: -1rem;
+    z-index: 1;
+}
+
+.quote-icon {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.ceo-quote {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.ceo-credentials h6 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.ceo-credentials p {
+    font-size: 0.875rem;
+    margin-bottom: 0.125rem;
+}
+
+.ceo-credentials .small {
+    font-size: 0.75rem;
+    color: var(--text-medium);
+}
+
+/* ================================
+   FOOTER RESPONSIVENESS
+   ================================ */
+
+footer {
+    padding: clamp(2rem, 4vw, 3rem) 0 !important;
+}
+
+footer .col-md-4,
+footer .col-md-2,
+footer .col-md-3 {
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+@media (max-width: 767px) {
+    footer .text-center p {
+        font-size: 0.875rem;
+    }
+}
+
+/* Load Calculator Promotion Section */
+.load-calculator-promo {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.calculator-visual {
+    position: relative;
+}
+
+.power-meter {
+    width: 280px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #f1f5f9);
+    border: 4px solid #cbd5e1;
+    border-radius: 20px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.meter-face {
+    width: 200px;
+    height: 140px;
+    margin: 20px auto 0;
+    position: relative;
+    background: radial-gradient(ellipse at center, #1e293b 0%, #334155 100%);
+    border-radius: 100px 100px 0 0;
+    overflow: hidden;
+}
+
+.meter-needle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 80px;
+    background: linear-gradient(180deg, #f59e0b 0%, #dc2626 100%);
+    border-radius: 2px;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(-30deg);
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+    animation: needleMove 3s ease-in-out infinite alternate;
+}
+
+@keyframes needleMove {
+    0% { transform: translateX(-50%) rotate(-30deg); }
+    100% { transform: translateX(-50%) rotate(30deg); }
+}
+
+.meter-scale {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.scale-mark {
+    position: absolute;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.scale-0 { bottom: 10px; left: 15px; }
+.scale-25 { bottom: 30px; left: 35px; }
+.scale-50 { bottom: 45px; left: 50%; transform: translateX(-50%); }
+.scale-75 { bottom: 30px; right: 35px; }
+.scale-100 { bottom: 10px; right: 15px; }
+
+.meter-center {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(145deg, #374151, #1f2937);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.meter-center i {
+    color: #fbbf24;
+    font-size: 10px;
+}
+
+.meter-label {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.calculation-icons {
+    margin-top: 2rem;
+}
+
+.device-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-white);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.device-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.device-icon i {
+    font-size: 20px;
+}
+
+.promo-content {
+    padding: 2rem 0;
+}
+
+.promo-content .badge {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.promo-content h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+}
+
+.promo-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   UTILITY CLASSES & FINAL OPTIMIZATIONS
+   ================================ */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Button gap utility for older Bootstrap versions */
+.gap-3 > * + * {
+    margin-left: 1rem !important;
+}
+
+/* Responsive image utility */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure all containers respect viewport */
+.container,
+.container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive text utilities */
+.text-responsive {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.text-responsive-lg {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+}
+
+/* Touch-friendly interactive elements */
+a, button, .btn, .nav-link {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    touch-action: manipulation;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus improvements for accessibility */
+*:focus {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+.btn:focus, .form-control:focus {
+    outline: none; /* Let the existing styles handle this */
+}
+
+/* ================================
+   LOAD CALCULATOR RESPONSIVENESS
+   ================================ */
+
+/* Base load calculator styles */
+.load-calculator-promo .row {
+    align-items: center;
+}
+
+.power-meter {
+    width: 280px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.device-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Load Calculator responsive breakpoints */
+@media (max-width: 479px) {
+    .load-calculator-promo .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .power-meter {
+        width: 220px;
+        height: 160px;
+    }
+
+    .meter-face {
+        width: 140px;
+        height: 100px;
+        margin: 15px auto 0;
+    }
+
+    .meter-needle {
+        height: 55px;
+    }
+
+    .device-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.25rem;
+    }
+
+    .device-icon i {
+        font-size: 1rem;
+    }
+
+    .gap-3 {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+
+    .gap-3 > * {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* ================================
+       CALCULATOR PAGE MOBILE OPTIMIZATION
+       ================================ */
+
+    /* Device cards full optimization */
+    .device-card {
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .device-card .card-body {
+        padding: 1.5rem 1rem;
+    }
+
+    .device-card .row {
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .device-card .col-6 {
+        flex: 1;
+        padding: 0;
+    }
+
+    .device-card .form-control {
+        font-size: 1.125rem;
+        padding: 0.875rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .device-card .form-label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        color: var(--text-dark);
+    }
+
+    /* Calculator button optimization */
+    #calculateBtn {
+        width: 100%;
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+        border-radius: 0.75rem;
+        margin: 2rem 0 1rem 0;
+    }
+
+    /* Results card optimization */
+    .results-card {
+        margin-top: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .results-card .result-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .results-card h3 {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+
+    .results-card .btn-lg {
+        margin-top: 1rem;
+        font-size: 1.125rem;
+    }
+
+    /* Our Story section small mobile optimization */
+    #our-story .row {
+        flex-direction: column-reverse;
+    }
+
+    .story-timeline {
+        padding-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .story-timeline::before {
+        left: 0.5rem;
+    }
+
+    .timeline-icon {
+        left: -1.5rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.75rem;
+    }
+
+    .timeline-item {
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-content h5 {
+        font-size: 1.125rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.875rem;
+    }
+
+    .ceo-portrait {
+        width: 140px;
+        height: 140px;
+    }
+
+    .ceo-quote-card {
+        padding: 1.25rem 0.875rem;
+        margin-top: 1rem;
+    }
+
+    .ceo-quote {
+        font-size: 0.875rem;
+    }
+
+    .stat-highlight {
+        margin-bottom: 1rem;
+    }
+
+    .stat-highlight h3 {
+        font-size: 1.75rem;
+    }
+
+    .section-divider {
+        width: 40px;
+        height: 3px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .power-meter {
+        width: 240px;
+        height: 170px;
+    }
+
+    .meter-face {
+        width: 160px;
+        height: 110px;
+        margin: 15px auto 0;
+    }
+
+    .meter-needle {
+        height: 65px;
+    }
+
+    .device-icon {
+        width: 45px;
+        height: 45px;
+        margin: 0 0.375rem;
+    }
+
+    .device-icon i {
+        font-size: 1.125rem;
+    }
+
+    .gap-3 {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .gap-3 > * {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Calculator device cards for regular phones */
+    .device-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .device-card .form-control {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    #calculateBtn {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .power-meter {
+        width: 260px;
+        height: 185px;
+    }
+
+    .device-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 0.5rem;
+    }
+}
+
+/* ================================
+   CTA SECTION MOBILE RESPONSIVENESS
+   ================================ */
+
+@media (max-width: 479px) {
+    .cta-section {
+        padding: 1.5rem 0 !important;
+        text-align: center;
+    }
+
+    .cta-section .btn-lg {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .cta-section {
+        padding: 2rem 0 !important;
+    }
+
+    /* Our Story section mobile optimization */
+    .story-timeline {
+        padding-left: 1.5rem;
+    }
+
+    .story-timeline::before {
+        left: 0.75rem;
+    }
+
+    .timeline-icon {
+        left: -1.875rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.875rem;
+    }
+
+    .timeline-item {
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .ceo-portrait {
+        width: 160px;
+        height: 160px;
+    }
+
+    .ceo-quote-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-highlight h3 {
+        font-size: 2rem;
+    }
+}
