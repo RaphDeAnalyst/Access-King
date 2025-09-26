@@ -482,6 +482,25 @@ h6 { font-size: clamp(1rem, 2vw, 1.25rem); }
     font-weight: 700;
 }
 
+/* Logo Styling */
+.navbar-logo {
+    height: 32px;
+    width: auto;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.05);
+}
+
+.footer-logo {
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+    filter: brightness(0.9);
+}
+
 .navbar-nav .nav-link {
     padding: 0.5rem 0.75rem;
     font-weight: 500;
@@ -1905,5 +1924,14 @@ html {
 
     .success-message .success-text {
         font-size: 14px;
+    }
+
+    /* Mobile logo sizing */
+    .navbar-logo {
+        height: 28px;
+    }
+
+    .footer-logo {
+        height: 20px;
     }
 }
